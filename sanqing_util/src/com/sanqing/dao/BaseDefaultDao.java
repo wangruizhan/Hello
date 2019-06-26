@@ -28,6 +28,8 @@ public  class BaseDefaultDao {
 		Map<String,Object> retMap = new HashMap<String, Object>();
 		for(String s:maporg.keySet()){
 			retMap.put(upper?s.toUpperCase():s.toLowerCase(), maporg.get(s));
+
+
 		}
 		return retMap;
 	}
