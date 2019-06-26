@@ -1,0 +1,34 @@
+package com.sanqing.sca.message;
+
+option java_package = "com.sanqing.sca.message";
+option java_outer_classname = "ProtocolDecode";
+
+message SimpleData{ 
+	required string name = 1; 
+	optional string value = 2; 
+}
+
+message SimpleMap{  	
+	 repeated SimpleData simpleData = 1;
+}
+
+message DataObject{
+  required string dataName = 1;
+  optional SimpleMap simpleMap = 2;
+}
+
+message Table{
+  required string name = 1;
+  repeated SimpleMap simpleMap = 2;
+}
+
+message ProtocolMessage{
+  required string messageId = 1;
+  required string service = 2;
+  required string task = 3;
+  repeated DataObject dataObject =4;
+  repeated Table table = 5;  
+  optional string recode = 6;
+  optional string remsg = 7;  
+}
+
