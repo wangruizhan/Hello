@@ -22,7 +22,7 @@ import org.springframework.util.Assert;
 import com.sanqing.page.SplitPage;
 
 public  class BaseDefaultDao {
-	//根据需要全部改为大写或者小写的格式。
+	//根据需要全部改为大写或者小写的格式llll。
 	
 	private Map<String,Object> mapKeyToUpperOrLower(Map<String,Object> maporg,boolean upper){
 		Map<String,Object> retMap = new HashMap<String, Object>();
